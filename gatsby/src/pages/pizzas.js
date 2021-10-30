@@ -2,10 +2,12 @@ import { graphql } from 'gatsby';
 import React from 'react';
 import Nav from '../components/Nav';
 import PizzaList from '../components/PizzaList';
+import ToppingsFilter from '../components/ToppingFilter';
 
 export default function PizzasPage({ data }) {
   return (
     <div>
+      <ToppingsFilter />
       <PizzaList pizzas={data.pizzas.nodes} />
     </div>
   );
@@ -20,8 +22,8 @@ export const query = graphql`
         slug {
           current
         }
-        topping {
-          topping
+        toppings {
+          name
           id
         }
         image {
