@@ -39,8 +39,8 @@ export default {
       validation: (Rule) => Rule.min(1000),
     },
     {
-      name: 'topping',
-      title: 'Topping',
+      name: 'toppings',
+      title: 'Toppings',
       type: 'array',
       of: [{ type: 'reference', to: [{ type: 'topping' }] }],
     },
@@ -49,10 +49,10 @@ export default {
     select: {
       title: 'name',
       media: 'image',
-      topping0: 'topping.0.topping',
-      topping1: 'topping.1.topping',
-      topping2: 'topping.2.topping',
-      topping3: 'topping.3.topping',
+      topping0: 'toppings.0.name',
+      topping1: 'toppings.1.name',
+      topping2: 'toppings.2.name',
+      topping3: 'toppings.3.name',
     },
     prepare: ({ title, media, ...top }) => ({
       title,

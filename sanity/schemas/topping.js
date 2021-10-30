@@ -7,7 +7,7 @@ export default {
   icon,
   fields: [
     {
-      name: 'topping',
+      name: 'name',
       title: 'Topping Name',
       type: 'string',
       description: 'Name of the topping',
